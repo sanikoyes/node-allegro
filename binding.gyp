@@ -8,7 +8,7 @@
 				'deps/include',
 			],
 			"library_dirs": [
-				'deps/lib',
+				'../deps/lib',
 			],
 			'libraries': [
 				'-lallegro',
@@ -23,11 +23,20 @@
 						'-framework IOKit',
 						'-framework OpenGL',
 					]
-				}]
+				}],
 			],
-			'cflags_cc': ['-std=c++11', '-fexceptions'],
-			'msvs_settings': { 'VCCLCompilerTool': { 'ExceptionHandling': 1 } },
-			'xcode_settings': { 'GCC_ENABLE_CPP_EXCEPTIONS': 'YES' },
+			'cflags_cc': [
+				'-std=c++11',
+				'-fexceptions',
+			],
+			'msvs_settings': {
+				'VCCLCompilerTool': {
+					'ExceptionHandling': 1,
+				},
+			},
+			'xcode_settings': {
+				'GCC_ENABLE_CPP_EXCEPTIONS': 'YES',
+			},
 			'sources': [
 				'hello.cc',
 				'allegro.cc',
